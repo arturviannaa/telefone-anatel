@@ -1,0 +1,58 @@
+{
+  "name": "telefone-anatel",
+  "version": "1.0.0",
+  "description": "Valida, mascara e formata telefones brasileiros pelo plano de numeração da Anatel: 67 DDDs, nono dígito, fixo, +55, E.164. Zero dependências.",
+  "keywords": [
+    "telefone",
+    "celular",
+    "anatel",
+    "ddd",
+    "brasil",
+    "validação",
+    "máscara",
+    "e164",
+    "whatsapp",
+    "phone",
+    "brazil"
+  ],
+  "homepage": "https://github.com/arturviannaa/telefone-anatel#readme",
+  "bugs": {
+    "url": "https://github.com/arturviannaa/telefone-anatel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturviannaa/telefone-anatel.git"
+  },
+  "license": "MIT",
+  "author": "Pervian Tech (https://pervian.tech)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "pretest": "npm run build",
+    "test": "node --test",
+    "prepack": "npm run build"
+  }
+}
